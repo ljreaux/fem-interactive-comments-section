@@ -13,10 +13,156 @@
   --clr-white: hsl(0, 0%, 100%);
 }
 
+#root,
 body {
   font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
   min-width: 100vw;
   min-height: 100vh;
+  background-color: var(--clr-very-light-gray);
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  --gap: 2rem;
+  display: grid;
+  grid-template-columns: calc(95%- var(--gap)) calc(5%- var(--gap));
+  gap: var(--gap);
+  background-color: var(--clr-white);
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-content {
+  grid-column: 2;
+  color: var(--clr-grayish-blue);
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--clr-grayish-blue);
+}
+
+.username {
+  font-weight: 500;
+  color: var(--clr-dark-blue);
+}
+
+.profile-img {
+  width: 3rem;
+}
+
+.btn {
+  font: inherit;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.user-btns {
+  display: flex;
+}
+
+.reply,
+.delete {
+  font-weight: 500;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.reply {
+  color: var(--clr-mod-blue);
+}
+
+.reply:hover {
+  color: var(--clr-grayish-blue);
+}
+
+.reply:hover img {
+  color: var(--clr-grayish-blue);
+}
+
+.delete {
+  color: var(--clr-soft-red);
+}
+
+.send {
+  background-color: var(--clr-mod-blue);
+  color: var(--clr-white);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.rating {
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-light-gray);
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  grid-row: span 2;
+}
+
+.rating p {
+  color: var(--clr-mod-blue);
+  margin: 0;
+  padding: 0;
+}
+
+/* .indented {
+  margin-left: 25%;
+} */
+
+.reply-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 1.5rem;
+  gap: 1rem;
+}
+
+textarea {
+  resize: none;
+  flex-grow: 1;
+  font: inherit;
+  border-color: var(--clr-light-gray);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.comment-form {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  background-color: var(--clr-white);
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.replying-to {
+  color: var(--clr-mod-blue);
+  font-weight: 700;
 }
